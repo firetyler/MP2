@@ -3,7 +3,6 @@ package Document;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public  abstract class Document implements DocumentInterface{
 
@@ -13,6 +12,8 @@ public  abstract class Document implements DocumentInterface{
     public void setTitle(String title){
         this.title = title;
     }
+
+    public String getTitle(){return title;}
 
     public void add(DocumentInterface element) {
         this.element.add(element);
@@ -26,6 +27,10 @@ public  abstract class Document implements DocumentInterface{
 
     public DocumentInterface getChild(int index) {
         return this.element.get(index);
+    }
+
+    public List<DocumentInterface> getList(){
+        return this.element;
     }
 
     @Override

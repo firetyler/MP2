@@ -1,24 +1,8 @@
 package Document;
 
 public interface DocumentInterface{
-    void addHeader();
-    void removeHeader();
-    void addParagraph();
-    void removeParagraph();
-    void addList();
-    void removeList();
-    void addTable();
-    void removeTable();
-    void addColum();
-    void removeColum();
-    void addRow();
-    void removeRow();
-    void addHeadLine();
-    void removeHeadLine();
-    void addFooter();
-    void removeFooter();
-    void body();
-    void removebody();
-
-
+ public void add(DocumentInterface d);
+ public  void remove(DocumentInterface d);
+ public DocumentInterface getChild(int index);
+ public String getText();
 }

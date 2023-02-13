@@ -1,23 +1,28 @@
 package Client;
 
-import Document.Document;
-import Document.DocumentBuilder;
-import Document.DocumentFactory;
+import Document.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class app {
     public static void main(String[] args){
 
         DocumentFactory factory = new DocumentFactory();
         DocumentBuilder documentBuilder = new DocumentBuilder(factory);
+        List<String> lista = new ArrayList();
+        lista.add("1. Etta");
+        lista.add("2. Tvåa");
+        DocumentInterface documentImp = documentBuilder.addHeader("Detta är en rubrik")
+                .addParagraph("Detta är en paragraph")
+                .addPlainText("Plaintext")
+                .addList(lista)
+                .addFooter("Detta är en footer")
+                .build();
 
-        documentBuilder.addHeader("")
-                .addParagraph("")
-                .addPlainText("")
-                .addFooter("")
-                .build()
-                .getList()
-                .forEach(e ->{System.out.println(e);});
-
+        documentBuilder.addParagraph("hehe");
+        documentBuilder.build();
+        documentImp.getList().forEach(e ->{System.out.println(e.getText());});
 
 
     }

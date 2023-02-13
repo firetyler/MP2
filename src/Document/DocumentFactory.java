@@ -6,28 +6,34 @@ import java.util.List;
 
 public class DocumentFactory implements DocumentFactoryInterface {
 
+    private DocumentFactoryInterface factory;
+
+    public DocumentFactory(DocumentFactoryInterface factory){
+        this.factory = factory;
+    }
+
     @Override
     public Header createHeader(String text) {
-        return new Header(text);
+        return this.factory.createHeader(text);
     }
 
     @Override
     public Paragraph createParagraph(String text) {
-        return new Paragraph(text);
+        return this.factory.createParagraph(text);
     }
 
     @Override
     public DocumentList createDocumentList(List<String> items) {
-        return new DocumentList(items) ;
+        return this.factory.createDocumentList(items);
     }
 
     @Override
     public Footer createFooter(String text) {
-        return new Footer(text);
+        return this.factory.createFooter(text);
     }
 
     @Override
     public PlainText createPlainText(String text) {
-        return new PlainText(text);
+        return this.factory.createPlainText(text);
     }
 }

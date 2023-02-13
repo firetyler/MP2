@@ -1,14 +1,18 @@
 package Document;
 
 import Document.Components.Header;
+
+import javax.print.Doc;
 import java.util.List;
 public class DocumentBuilder {
-    private Document document;
+    private DocumentInterface document;
     private DocumentFactoryInterface factory;
 
     public DocumentBuilder(DocumentFactoryInterface factory){
         this.factory = factory;
-
+        this.document = new Document() {
+            
+        };
     }
 
     public DocumentBuilder(String title){
@@ -34,7 +38,7 @@ public class DocumentBuilder {
         document.add(this.factory.createPlainText(text));
         return this;
     }
-    public Document build(){
+    public DocumentInterface build(){
         return document;
     }
 }

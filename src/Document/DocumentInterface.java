@@ -1,5 +1,7 @@
 package Document;
 
+import java.util.List;
+
 public interface DocumentInterface{
  public void add(DocumentInterface d);
  public  void remove(DocumentInterface d);

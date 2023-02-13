@@ -8,7 +8,7 @@ public class Footer extends Document {
     public Footer(String text) {
         this.text = text;
     }
-
+    @Override
     public String getText() {
         return text;
     }

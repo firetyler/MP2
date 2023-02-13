@@ -16,6 +16,12 @@ public class DocumentList extends Document {
         return items;
     }
 
+    @Override
+    public String getText() {
+
+        return items.toString();
+    }
+
     public void setItems(List<String> items) {
         this.items = items;
     }

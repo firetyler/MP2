@@ -8,7 +8,7 @@ import java.util.List;
 public class app {
     public static void main(String[] args){
 
-        DocumentFactory factory = new DocumentFactory();
+        DocumentFactoryInterface factory = new DocumentFactory(new HTMLDocument());
         DocumentBuilder documentBuilder = new DocumentBuilder(factory);
         List<String> lista = new ArrayList();
         lista.add("1. Etta");

@@ -7,7 +7,7 @@ public class Paragraph extends Document {
     public Paragraph(String text) {
         this.text = text;
     }
-
+    @Override
     public String getText() {
         return text;
     }

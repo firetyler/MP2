@@ -33,7 +33,7 @@ public  abstract class Document implements DocumentInterface{
         return this.element;
     }
 
-    @Override
+
     public String getText() {
         return null;
     }

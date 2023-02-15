@@ -2,6 +2,7 @@ package Document;
 
 
 import Document.Components.DocumentList;
+import Document.Components.ListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,11 +51,11 @@ public  abstract class Document implements DocumentInterface{
                 if (isBetweenHeaderAndFooter) {
                     if(e instanceof DocumentList) {
                         DocumentList documentList = (DocumentList) e;
-                        for (String s : documentList.getItems()) {
-                            if(s.startsWith("<li>")) {
-                                res += "\t" + "\t" + s + "\n";
+                        for (ListItem s : documentList.getItems()) {
+                            if(s.getText().startsWith("<li>")) {
+                                res += "\t" + "\t" + s.getText() + "\n";
                             } else {
-                                res += "\t" + s + "\n";
+                                res += "\t" + s.getText() + "\n";
                             }
                         }
                     }

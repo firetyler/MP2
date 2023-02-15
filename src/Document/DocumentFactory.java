@@ -2,7 +2,6 @@ package Document;
 
 import Document.Components.*;
 
-import java.util.List;
 
 public class DocumentFactory implements DocumentFactoryInterface {
 

@@ -18,8 +18,9 @@ public class DocumentList extends Document {
 
     @Override
     public String getText() {
-
-        return items.toString();
+        StringBuilder sb = new StringBuilder();
+        items.forEach(item -> sb.append(item.getText()));
+        return sb.toString();
     }
 
     public void setItems(List<ListItem> items) {

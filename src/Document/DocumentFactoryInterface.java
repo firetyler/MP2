@@ -12,6 +12,4 @@ public interface DocumentFactoryInterface {
     void addDocumentListItem(String item);
     Footer createFooter(String text);
     PlainText createPlainText(String text);
-
-
 }

@@ -1,9 +1,5 @@
 package Document;
 
-import Document.Components.Header;
-
-import javax.print.Doc;
-import java.util.List;
 public class DocumentBuilder {
     private DocumentInterface document;
     private DocumentFactoryInterface factory;

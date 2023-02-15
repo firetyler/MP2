@@ -35,6 +35,24 @@ public  abstract class Document implements DocumentInterface{
 
 
     public String getText() {
-        return null;
+        String res = "";
+        boolean isBetweenHeaderAndFooter = false;
+        for (DocumentInterface e : this.element) {
+            if (e.getText().startsWith("<header>")) {
+                res += e.getText() + "\n";
+                isBetweenHeaderAndFooter = true;
+            } else if (e.getText().startsWith("<footer>")) {
+                res += e.getText() + "\n";
+                isBetweenHeaderAndFooter = false;
+            } else {
+                if (isBetweenHeaderAndFooter) {
+                    res += "    " + e.getText() + "\n";
+                } else {
+                    res += e.getText() + "\n";
+                }
+            }
+        }
+        return res;
+
     }
 }

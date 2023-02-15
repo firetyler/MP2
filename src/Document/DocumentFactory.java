@@ -23,8 +23,13 @@ public class DocumentFactory implements DocumentFactoryInterface {
     }
 
     @Override
-    public DocumentList createDocumentList(List<String> items) {
-        return this.factory.createDocumentList(items);
+    public DocumentList createDocumentList() {
+        return this.factory.createDocumentList();
+    }
+
+    @Override
+    public void addDocumentListItem(String item) {
+        this.factory.addDocumentListItem(item);
     }
 
     @Override

@@ -8,7 +8,8 @@ public interface DocumentFactoryInterface {
 
     Header createHeader(String text);
     Paragraph createParagraph(String text);
-    DocumentList createDocumentList(List<String> items);
+    DocumentList createDocumentList();
+    void addDocumentListItem(String item);
     Footer createFooter(String text);
     PlainText createPlainText(String text);
 

@@ -16,13 +16,20 @@ public class app {
         DocumentInterface documentImp = documentBuilder.addHeader("Detta är en rubrik")
                 .addParagraph("Detta är en paragraph")
                 .addPlainText("Plaintext")
-                .addList(lista)
+                .createList()
+                .addListItem("1. Etta")
+                .addListItem("2. Tvåa")
+                .createList()
+                .addListItem("1. Etta")
+                .addListItem("2. Tvåa")
+                .addListItem("3. Tre")
                 .addFooter("Detta är en footer")
                 .build();
-
-        documentBuilder.addParagraph("hehe");
-        documentBuilder.build();
         documentImp.getList().forEach(e ->{System.out.println(e.getText());});
+
+        System.out.println("-------------------------------------------------");
+
+        System.out.println(documentImp.getText());
 
 
     }

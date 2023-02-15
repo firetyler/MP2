@@ -26,9 +26,15 @@ public class DocumentBuilder {
         document.add(this.factory.createParagraph(text));
         return this;
     }
-    public DocumentBuilder addList(List<String> item){
-        document.add(this.factory.createDocumentList(item));
-    return this;
+
+    public DocumentBuilder createList(){
+        document.add(this.factory.createDocumentList());
+        return this;
+    }
+
+    public DocumentBuilder addListItem(String item){
+        this.factory.addDocumentListItem(item);
+        return this;
     }
     public DocumentBuilder addFooter(String text){
         document.add(this.factory.createFooter(text));

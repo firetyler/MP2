@@ -21,8 +21,8 @@ public class DocumentList extends Document {
 
         return items.toString();
     }
-
-    public void setItems(List<String> items) {
+    @Override
+    public void setText(String text) {
         this.items = items;
     }
 }

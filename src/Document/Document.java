@@ -35,6 +35,9 @@ public  abstract class Document implements DocumentInterface{
         return this.element;
     }
 
+    public void setText(String text){
+    }
+
 
     public String getText() {
         String res = "";

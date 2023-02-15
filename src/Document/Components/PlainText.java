@@ -12,7 +12,7 @@ public class PlainText extends Document {
     public String getText() {
         return text;
     }
-
+    @Override
     public void setText(String text) {
         this.text = text;
     }

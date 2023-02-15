@@ -25,7 +25,7 @@ public class app {
                 .addListItem("3. Tre")
                 .addFooter("Detta är en footer")
                 .build();
-        documentImp.getList().forEach(e ->{System.out.println(e.getText());});
+        //documentImp.getList().forEach(e ->{System.out.println(e.getText());});
 
         System.out.println("-------------------------------------------------");
 

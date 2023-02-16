@@ -23,6 +23,14 @@ public class app {
                 .addFooter("Detta är en footer")
                 .build().getText());
         System.out.println("-------------------------------------------------");
+        System.out.println(facade.getFacade("html")
+                .addHeader("Detta är en rubrik")
+                .addParagraph("Detta är en paragraph")
+                .addPlainText("Plaintext")
+                .addFooter("Detta är en footer")
+                .build().getText());
+
+        System.out.println("-------------------------------------------------");
         List<DocumentInterface> document= facade.getFacade("html")
                 .addHeader("Detta är en rubrik")
                 .addParagraph("Detta är en paragraph")

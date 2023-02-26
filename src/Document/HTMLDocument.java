@@ -7,8 +7,6 @@ import java.util.List;
 
 public class HTMLDocument implements DocumentFactoryInterface {
 
-    private List<ListItem> items;
-
     @Override
     public Header createHeader(String text) {
         return new Header("<header>" + text + "</header>");
@@ -21,17 +19,16 @@ public class HTMLDocument implements DocumentFactoryInterface {
 
     @Override
     public DocumentList createDocumentList() {
-        this.items = new ArrayList<>();
-        this.items.add(new ListItem("<ul>"));
-        this.items.add(new ListItem("</ul>"));
-        return new DocumentList(this.items);
+        ArrayList<ListItem> list = new ArrayList<>();
+        list.add(new ListItem("<ul>"));
+        list.add(new ListItem("</ul>"));
+        return  new DocumentList(list);
     }
 
 
     @Override
     public ListItem addDocumentListItem(String item) {
-        this.items.add(this.items.size() - 1, new ListItem("<li>" +item+ "</li>") );
-        return this.items.get(this.items.size() - 2);
+        return new ListItem("<li>" +item+ "</li>");
     }
 
     @Override

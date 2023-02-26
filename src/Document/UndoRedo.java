@@ -15,7 +15,7 @@ public class UndoRedo {
     }
 
     public void redo(){
-         document.add(type);
+        document.add(type);
     }
 
 }

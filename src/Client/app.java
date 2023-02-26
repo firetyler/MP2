@@ -1,6 +1,9 @@
 package Client;
 
 import Document.*;
+import Document.Components.DocumentList;
+import Document.Components.Header;
+import Document.Components.ListItem;
 
 import java.util.List;
 
@@ -15,10 +18,10 @@ public class app {
                 .addPlainText("Plaintext")
                 .createList()
                 .addListItem("1. Etta")
+                .addListItem("2. Tvåa")
                 .addFooter("Detta är en footer")
-                .undo()
-                .undo()
-                .undo()
+      
+
                 .build()
                 .getText());
         System.out.println("-------------------------------------------------");

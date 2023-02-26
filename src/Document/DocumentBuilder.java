@@ -1,5 +1,6 @@
 package Document;
 
+import java.util.List;
 import java.util.Stack;
 
 import Document.Components.DocumentList;
@@ -47,9 +48,12 @@ public class DocumentBuilder {
     }
 
     public DocumentBuilder addListItem(String item){
-        ListItem listItem = this.factory. addDocumentListItem(item);
-       //document.add(listItem);
-        undo.push(listItem);
+        ListItem listItem = this.factory.addDocumentListItem(item);
+        DocumentList list = this.document.getLastList();
+        if(list != null) {
+            list.add(listItem.getText());
+            undo.push(listItem);
+        }
         return this;
     }
     public DocumentBuilder addFooter(String text){
@@ -63,6 +67,14 @@ public class DocumentBuilder {
         document.add(plainText);
         undo.push(plainText);
         return this;
+    }
+
+    public DocumentBuilder add(Document document){
+        this.document.add(document);
+        undo.push((Document) document);
+        return this;
+
+
     }
 
     public DocumentInterface build(){

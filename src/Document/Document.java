@@ -23,8 +23,8 @@ public  abstract class Document implements DocumentInterface{
     }
 
 
-    public void remove(DocumentInterface element) {
-        this.element.remove(element);
+    public boolean remove(DocumentInterface element) {
+        return this.element.remove(element);
     }
 
 

@@ -2,6 +2,7 @@ package Document.Components;
 
 
 import Document.Document;
+import Document.DocumentInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,10 @@ public class DocumentList extends Document {
         return items;
     }
 
+    @Override
+    public boolean remove(DocumentInterface element) {
+        return this.items.remove(this.items.get(this.items.size() - 2));
+    }
     @Override
     public String getText() {
         StringBuilder sb = new StringBuilder();

@@ -69,14 +69,6 @@ public class DocumentBuilder {
         return this;
     }
 
-    public DocumentBuilder add(Document document){
-        this.document.add(document);
-        undo.push((Document) document);
-        return this;
-
-
-    }
-
     public DocumentInterface build(){
         return document;
     }

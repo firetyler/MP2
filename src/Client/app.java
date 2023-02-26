@@ -19,9 +19,19 @@ public class app {
                 .createList()
                 .addListItem("1. Etta")
                 .addListItem("2. Tvåa")
-                .addFooter("Detta är en footer")
-      
+                .undo()
+                .undo()
+                .undo()
+                .undo()
+                .undo()
+                .undo()
 
+                .redo()
+                .redo()
+                .redo()
+                .redo()
+                .redo()
+                .redo()
                 .build()
                 .getText());
         System.out.println("-------------------------------------------------");

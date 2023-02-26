@@ -27,8 +27,8 @@ public class DocumentFactory implements DocumentFactoryInterface {
     }
 
     @Override
-    public void addDocumentListItem(String item) {
-        this.factory.addDocumentListItem(item);
+    public ListItem addDocumentListItem(String item) {
+        return this.factory.addDocumentListItem(item);
     }
 
     @Override

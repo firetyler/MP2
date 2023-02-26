@@ -11,6 +11,9 @@ public class DocumentList extends Document {
     public DocumentList(List<ListItem> items) {
         this.items = items;
     }
+    
+    public DocumentList() {
+    }
 
     public List<ListItem> getItems() {
         return items;

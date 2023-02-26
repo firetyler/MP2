@@ -29,8 +29,9 @@ public class HTMLDocument implements DocumentFactoryInterface {
 
 
     @Override
-    public void addDocumentListItem(String item) {
+    public ListItem addDocumentListItem(String item) {
         this.items.add(this.items.size() - 1, new ListItem("<li>" +item+ "</li>") );
+        return this.items.get(this.items.size() - 2);
     }
 
     @Override

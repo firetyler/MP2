@@ -36,7 +36,7 @@ public class DocumentList extends Document {
     public void setItems(List<ListItem> items) {
         this.items = items;
     }
-
+    
     public Document add(String string) {
         if(this.items.size() > 0)
             this.items.add(this.items.size() - 1, new ListItem(string));

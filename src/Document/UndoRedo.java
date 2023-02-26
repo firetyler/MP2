@@ -25,7 +25,13 @@ public class UndoRedo {
     }
 
     public void redo(){
-        document.add(type);
+        if(type.getText().contains("<li>")){
+            System.out.println("Redo list item");
+            DocumentList list =  document.getLastList();
+            list.add(type.getText());
+        }
+        else
+            document.add(type);
     }
 
 }

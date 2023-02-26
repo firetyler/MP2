@@ -19,6 +19,7 @@ public class app {
                 .createList()
                 .addListItem("1. Etta")
                 .addListItem("2. Tvåa")
+                .addFooter("Footer")
                 .undo()
                 .undo()
                 .undo()
@@ -32,6 +33,11 @@ public class app {
                 .redo()
                 .redo()
                 .redo()
+                .undo()
+                .redo()
+
+                .addListItem("3. Tre")
+                .undo()
                 .build()
                 .getText());
         System.out.println("-------------------------------------------------");

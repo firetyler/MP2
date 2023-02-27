@@ -40,8 +40,13 @@ public class app {
                 .undo()
                 .build()
                 .getText());
-        System.out.println("-");
+
         System.out.println("-------------------------------------------------");
+        System.out.println(facade.getFacade("markDown").addHeader("h").addParagraph("j").undo().createList().addListItem("1").addListItem("2")
+
+
+
+                .build().getText());
         // System.out.println(facade.getFacade("html")
         //         .addHeader("Detta är en rubrik")
         //         .addParagraph("Detta är en paragraph")

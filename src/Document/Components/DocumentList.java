@@ -24,8 +24,10 @@ public class DocumentList extends Document {
 
     @Override
     public boolean remove(DocumentInterface element) {
+        //Remove 2 since both lists are made to start with 1 element.
         return this.items.remove(this.items.get(this.items.size() - 2));
     }
+
     @Override
     public String getText() {
         StringBuilder sb = new StringBuilder();

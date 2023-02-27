@@ -19,35 +19,28 @@ public class app {
                 .createList()
                 .addListItem("1. Etta")
                 .addListItem("2. Tvåa")
+                .undo()
+                .redo()
                 .addFooter("Footer")
-                .undo()
-                .undo()
-                .undo()
-                .undo()
-                .undo()
-                .undo()
 
-                .redo()
-                .redo()
-                .redo()
-                .redo()
-                .redo()
-                .redo()
-                .undo()
-                .redo()
 
-                .addListItem("3. Tre")
-                .undo()
                 .build()
                 .getText());
 
         System.out.println("-------------------------------------------------");
-        System.out.println(facade.getFacade("markDown").addHeader("h")
-                .addParagraph("j").undo().createList().addListItem("1").addListItem("2")
-
-
-
-                .build().getText());
+        System.out.println(facade.getFacade("markDown")
+        .addHeader("h")
+                
+        .addParagraph("j")
+        .undo()
+        .createList()
+        .addListItem("1")
+        .addListItem("2")
+        .undo()
+        .redo()
+        .addParagraph("paragraph")
+        .build()
+        .getText());
         // System.out.println(facade.getFacade("html")
         //         .addHeader("Detta är en rubrik")
         //         .addParagraph("Detta är en paragraph")

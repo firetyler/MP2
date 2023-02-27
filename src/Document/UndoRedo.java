@@ -3,6 +3,7 @@ package Document;
 import java.util.List;
 
 import Document.Components.DocumentList;
+import Document.Components.ListItem;
 
 public class UndoRedo {
     
@@ -15,9 +16,9 @@ public class UndoRedo {
     }
 
     public void undo(){
-        if(type.getText().contains("<li>")){
-            System.out.println("Undo list item");
+        if(type instanceof ListItem){
             DocumentList list =  document.getLastList();
+            
             list.remove(type);
         }
         else
@@ -25,8 +26,7 @@ public class UndoRedo {
     }
 
     public void redo(){
-        if(type.getText().contains("<li>")){
-            System.out.println("Redo list item");
+        if(type instanceof ListItem){
             DocumentList list =  document.getLastList();
             list.add(type.getText());
         }

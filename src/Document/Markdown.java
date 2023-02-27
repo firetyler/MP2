@@ -7,13 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Markdown implements DocumentFactoryInterface {
-    private List<ListItem> itemList;
-    private List<String> item;
 
     @Override
     public Header createHeader(String text) {
 
-        return new Header("#"+ text);
+        return new Header("#"+ text + "\n");
     }
 
     @Override
@@ -24,14 +22,12 @@ public class Markdown implements DocumentFactoryInterface {
     @Override
     public DocumentList createDocumentList() {
         ArrayList<ListItem> list = new ArrayList<>();
-        list.add(new ListItem("-"));
-        list.add(new ListItem("-"));
+        list.add(new ListItem(""));
         return new DocumentList(list);
     }
 
     @Override
     public ListItem addDocumentListItem(String item) {
-    //   this.item.add("-" + item + "\n");
         return new ListItem("-" + item + "\n");
     }
 

@@ -42,7 +42,8 @@ public class app {
                 .getText());
 
         System.out.println("-------------------------------------------------");
-        System.out.println(facade.getFacade("markDown").addHeader("h").addParagraph("j").undo().createList().addListItem("1").addListItem("2")
+        System.out.println(facade.getFacade("markDown").addHeader("h")
+                .addParagraph("j").undo().createList().addListItem("1").addListItem("2")
 
 
 

@@ -23,13 +23,15 @@ public class Markdown implements DocumentFactoryInterface {
 
     @Override
     public DocumentList createDocumentList() {
-        this.item = new ArrayList<>();
-        return new DocumentList(this.itemList);
+        ArrayList<ListItem> list = new ArrayList<>();
+        list.add(new ListItem("-"));
+        list.add(new ListItem("-"));
+        return new DocumentList(list);
     }
 
     @Override
     public ListItem addDocumentListItem(String item) {
-       this.item.add("-" + item + "\n");
+    //   this.item.add("-" + item + "\n");
         return new ListItem("-" + item + "\n");
     }
 

@@ -3,7 +3,6 @@ package Document;
 import Document.Components.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HTMLDocument implements DocumentFactoryInterface {
 

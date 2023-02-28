@@ -1,6 +1,5 @@
 package Document;
 
-import java.util.List;
 import java.util.Stack;
 
 import Document.Components.DocumentList;

@@ -1,10 +1,8 @@
 package Document;
 
 import Document.Components.*;
-import Document.DocumentFactoryInterface;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Markdown implements DocumentFactoryInterface {
 
